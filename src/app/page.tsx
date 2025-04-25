@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import * as motion from "motion/react-client"
 
 export default function Home() {
@@ -28,8 +30,33 @@ export default function Home() {
         >
           Thiên Kim
         </motion.div>
-
       </main>
+      <motion.div
+        className="absolute bottom-0 left-1/2 transform -translate-x-1/2"
+        initial={{ y: "100%" }}
+        animate={{x:-150, y: "40%",rotate:-45 }}
+        transition={{ duration: 1 }}
+      >
+        <Image
+          src="images/Album 3/Frame 26.png" // Replace with the actual path to your image
+          alt="Moving Image"
+          width={200} // Adjust width as needed
+          height={200} // Adjust height as needed
+        />
+      </motion.div>
+      <motion.div
+        className="absolute bottom-0 left-1/2 transform -translate-x-1/2"
+        initial={{ y: "100%" }}
+        animate={{x:200, y: "20%",rotate:25 }}
+        transition={{ duration: 1 }}
+      >
+        <Image
+          src="images/Album 4/TK-album 4.png" // Replace with the actual path to your image
+          alt="Moving Image"
+          width={200} // Adjust width as needed
+          height={200} // Adjust height as needed
+        />
+      </motion.div>
     </div>
   );
 }

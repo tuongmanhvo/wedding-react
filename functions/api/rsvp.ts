@@ -32,7 +32,7 @@ export async function onRequestPost(context: {
 
         if (error) {
             console.error(error);
-            return new Response(JSON.stringify({ message: 'Lỗi hệ thống!' }), { status: 500 });
+            return new Response(JSON.stringify({ message: 'Lỗi dữ liệu!' }), { status: 500 });
         }
 
         // await sendConfirmationEmail({ name, email, attending, guests });

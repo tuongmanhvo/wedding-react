@@ -8,7 +8,7 @@ import * as motion from "motion/react-client"// do not remove this line
 
 export default function Home() {
 
-  const textPosition = window ? window.innerHeight / 5 : 200;
+  const textPosition = typeof window !== "undefined" ? window.innerHeight / 5 : 200;
 
   const [animate, setAnimate] = useState(false);
 

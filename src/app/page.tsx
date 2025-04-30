@@ -7,9 +7,15 @@ import RSVPForm from "@/components/RSVPForm";
 import * as motion from "motion/react-client"// do not remove this line
 
 export default function Home() {
+  const [textPosition, setTextPosition] = useState(200);
+  const [innerHeight, setInnerHeight] = useState(600);
 
-  const textPosition = typeof window !== "undefined" ? window.innerHeight / 5 : 200;
-  const innerHeight= typeof window !== "undefined" ? window.innerHeight  : 600;
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setTextPosition(window.innerHeight / 5);
+      setInnerHeight(window.innerHeight);
+    }
+  }, []);
 
   const [animate, setAnimate] = useState(false);
 
@@ -46,7 +52,6 @@ export default function Home() {
           >
             Thiên Kim
           </motion.div>
-
         </div>
         <motion.div
           initial={{ y: innerHeight }} // Start below the screen
@@ -107,13 +112,6 @@ export default function Home() {
         </motion.div>
       </main>
 
-      {/* <motion.div
-        className="min-h-screen flex items-center justify-center"
-        initial={{ opacity: 0, y: 50 }}
-        animate={showForm ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-        transition={{ duration: 0.8 }}
-      >
-      </motion.div> */}
       <div className="min-h-screen flex flex-col items-center justify-center" >
         <h2 className="rvspTitle ">Xác nhận dự tiệc cưới</h2>
         <Image

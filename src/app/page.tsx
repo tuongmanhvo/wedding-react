@@ -9,6 +9,7 @@ import * as motion from "motion/react-client"// do not remove this line
 export default function Home() {
 
   const textPosition = typeof window !== "undefined" ? window.innerHeight / 5 : 200;
+  const innerHeight= typeof window !== "undefined" ? window.innerHeight  : 600;
 
   const [animate, setAnimate] = useState(false);
 
@@ -48,7 +49,7 @@ export default function Home() {
 
         </div>
         <motion.div
-          initial={{ y: window.innerHeight }} // Start below the screen
+          initial={{ y: innerHeight }} // Start below the screen
           animate={{ x: "-50%", y: textPosition, rotate: -45 }}
           transition={{ duration: 1, delay: 0.6 }}
           style={{ position: "relative", width: "100%", maxWidth: "400px", aspectRatio: "2 / 3" }}
@@ -62,7 +63,7 @@ export default function Home() {
         </motion.div>
 
         <motion.div
-          initial={{ y: window.innerHeight }} // Start below the screen
+          initial={{ y: innerHeight }} // Start below the screen
           animate={{ x: "80%", y: -textPosition, rotate: 25 }}
           transition={{ duration: 1, delay: 1 }}
           style={{ position: "relative", width: "100%", maxWidth: "400px", aspectRatio: "3 / 2" }}
@@ -77,7 +78,7 @@ export default function Home() {
 
         <motion.div
           initial={{
-            y: window.innerHeight,
+            y: innerHeight,
             scale: 0.5,
             opacity: 0,
           }}

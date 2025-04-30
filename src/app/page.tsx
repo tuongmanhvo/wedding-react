@@ -7,24 +7,8 @@ import RSVPForm from "@/components/RSVPForm";
 import * as motion from "motion/react-client"// do not remove this line
 
 export default function Home() {
-  const [showForm, setShowForm] = useState(false);
 
   const textPosition = window ? window.innerHeight / 5 : 200;
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const viewportHeight = window.innerHeight / 2;
-
-      if (scrollPosition > viewportHeight) { // Adjusted to check against the viewport height
-        setShowForm(true);
-      } else {
-        setShowForm(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const [animate, setAnimate] = useState(false);
 

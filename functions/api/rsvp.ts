@@ -42,44 +42,14 @@ export async function onRequestPost(context: {
 
         return new Response(JSON.stringify({ message: msg }), {
             status: 200,
-            headers: {
-                "Access-Control-Allow-Origin": "*", // Or your site URL
-                "Access-Control-Allow-Methods": "POST, OPTIONS",
-                "Access-Control-Allow-Headers": "Content-Type",
-            },
         });
     } catch (error) {
         console.error(error);
         return new Response(JSON.stringify({ message: 'Lỗi hệ thống!' }), {
             status: 500,
-            headers: {
-                "Access-Control-Allow-Origin": "*", // Or your site URL
-                "Access-Control-Allow-Methods": "POST, OPTIONS",
-                "Access-Control-Allow-Headers": "Content-Type",
-            },
 
         });
     }
 };
-export async function onRequestGet() {
-    return new Response('RSVP API is working', {
-        status: 200,
-        headers: {
-            "Access-Control-Allow-Origin": "*", // Or your site URL
-            "Access-Control-Allow-Methods": "POST, OPTIONS",
-            "Access-Control-Allow-Headers": "Content-Type",
-        },
-    });
-}
 
-export async function onRequestOptions() {
-    return new Response(null, {
-        status: 204,
-        headers: {
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Methods": "POST, OPTIONS",
-            "Access-Control-Allow-Headers": "Content-Type",
-        },
-    });
-}
 

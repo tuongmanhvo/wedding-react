@@ -22,8 +22,8 @@ export default function RSVPForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // const url="/api/rsvp";
-    const url="http://127.0.0.1:4000/api/rsvp";
+    const url="/api/rsvp";
+    // const url="http://127.0.0.1:4000/api/rsvp";
 
     const res = await fetch(url, {
       method: "POST",

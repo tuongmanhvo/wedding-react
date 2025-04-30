@@ -65,8 +65,47 @@ body {
   font-size: 24px;
 }
 
+.rvspTitle {
+  font-family: "Merriweather Black", sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+.rvspName{
+  font-family: "Merriweather Regular", sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+}
+
 .va {
   font-family: "Merriweather Light Italic", serif;
   font-weight: 300;
   font-style: italic;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* Full viewport height */
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  color: white;
+  text-align: center;
+  flex-direction: column;
+}
+
+.heroBg {
+  background-image: url("/images/homepage/Frame 34.png");
+  background-size: cover;
+  /* Ensures the image covers the entire area */
+  background-position: center;
+  /* Centers the image */
+  background-repeat: no-repeat;
+  /* Prevents the image from repeating */
+}
+
+.submitBtnColor {
+  background-color: #70B881;
+  ;
 }

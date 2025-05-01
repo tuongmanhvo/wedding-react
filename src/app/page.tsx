@@ -20,12 +20,12 @@ export default function Home() {
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setAnimate(true), 2800);
+    const timer = setTimeout(() => setAnimate(true), 2700);
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen font-[family-name:var(--font-geist-sans)]">
+    <div className="flex flex-col items-center justify-center min-h-screen ">
       <main className="flex flex-col items-center justify-center gap-[4px] h-screen w-full overflow-hidden">
         <div id="divName" className="flex items-center justify-center gap-[4px] w-full h-screen">
           <motion.div
@@ -111,6 +111,19 @@ export default function Home() {
           />
         </motion.div>
       </main>
+
+      <div id="loimoi" className="min-h-screen flex items-center justify-center flex-col gap-20 lg:flex-row lg:gap-10 ">
+        <div className="flex flex-col gap-7 font-bold">
+          <span id="ten" className="text-xl">Tường & Kim</span>
+          <span id="thenguyen" className="text-4xl">Thề Nguyện</span>
+        </div>
+        <div id="ngay" className="flex flex-col justify-center gap-4 items-center mx-4 lg:items-end">
+          <span>Chúng mình sẽ chính thức bắt đầu hành trình mới,</span>
+          <span>vào ngày <span className="font-bold">18.05.2025</span>, tại <span className="font-bold">Amor Resort - Sài Gòn</span>.</span>
+          <span>Thật hạnh phúc nếu mọi người thân yêu ở đó cùng nâng ly và cùng vui với chúng mình.</span>
+
+        </div>
+      </div>
 
       <div className="min-h-screen flex flex-col items-center justify-center" >
         <h2 className="rvspTitle ">Xác nhận dự tiệc cưới</h2>

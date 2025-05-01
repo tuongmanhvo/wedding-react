@@ -4,7 +4,7 @@ import { FaMapMarkerAlt } from 'react-icons/fa';
 // import * as motion from "motion/react-client"// do not remove this line
 
 const Dongy = () => {
-    const [timeLeft, setTimeLeft] = useState('');
+    // const [timeLeft, setTimeLeft] = useState('');
     const [dayLeft, setDayLeft] = useState('');
     const [hourLeft, setHourLeft] = useState('');
     const [minLeft, setMinLeft] = useState('');
@@ -18,7 +18,7 @@ const Dongy = () => {
 
             if (difference <= 0) {
                 clearInterval(interval);
-                setTimeLeft('The day has arrived!');
+                // setTimeLeft('The day has arrived!');
             } else {
                 const days = Math.floor(difference / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);

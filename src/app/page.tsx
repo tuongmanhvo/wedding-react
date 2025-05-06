@@ -7,6 +7,7 @@ import Loimoi from '@/components/Loimoi';
 import Dongy from '@/components/Dongy';
 
 import * as motion from "motion/react-client"// do not remove this line
+import AlbumIndex from "@/components/AlbumIndex";
 
 export default function Home() {
   const [textPosition, setTextPosition] = useState(200);
@@ -130,6 +131,7 @@ export default function Home() {
 
         <RSVPForm />
       </div>
+      <AlbumIndex></AlbumIndex>
     </div>
   );
 }

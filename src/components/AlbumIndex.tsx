@@ -16,7 +16,7 @@ const AlbumIndex = () => {
                 <div className="flex flex-col justify-center gap-4 mx-4 lg:items-end">
                     <span>Bộ ảnh này ghi lại những khoảng khắc dịu dàng,</span>
                     <span>nơi ánh mắt trao nhau nhiều hơn vạn lời nói.</span>
-                    <span>Một chương mở đầu ngọt ngào cho hành trình dài mang tên <span className='font-bold'>"Chúng Mình"</span>.</span>
+                    <span>Một chương mở đầu ngọt ngào cho hành trình dài mang tên <span className='font-bold'>&quot;Chúng Mình&quot;</span>.</span>
                 </div>
             </div>
 
@@ -36,9 +36,9 @@ const AlbumIndex = () => {
                     <Image
                         src="/images/Album 2/MIN04349.jpg"
                         alt="Moving Image"
-                        className="w-full h-full object-cover rounded-lg" // Added rounded corners
-                        width={300} // Fixed width
-                        height={300} // Fixed height
+                        className="w-full h-full object-cover rounded-lg" 
+                        width={300} 
+                        height={300}
                         objectFit="cover"
                     />
                 </div>
@@ -46,9 +46,9 @@ const AlbumIndex = () => {
                     <Image
                         src="/images/Album 3/DSC09191.jpg"
                         alt="Moving Image"
-                        className="w-full h-full object-cover rounded-lg" // Added rounded corners
-                        width={300} // Fixed width
-                        height={300} // Fixed height
+                        className="w-full h-full object-cover rounded-lg" 
+                        width={300} 
+                        height={300}
                         objectFit="cover"
                     />
                 </div>
@@ -56,9 +56,9 @@ const AlbumIndex = () => {
                     <Image
                         src="/images/Album 4/TK-album 4.png"
                         alt="Moving Image"
-                        className="w-full h-full object-cover rounded-lg" // Added rounded corners
-                        width={300} // Fixed width
-                        height={300} // Fixed height
+                        className="w-full h-full object-cover rounded-lg" 
+                        width={300} 
+                        height={300}
                         objectFit="cover"
                     />
                 </div>

@@ -15,6 +15,7 @@ export default function RSVPForm() {
     requests: "",
   });
   const [status, setStatus] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -22,6 +23,7 @@ export default function RSVPForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
     const url="/api/rsvp";
     // const url="http://127.0.0.1:4000/api/rsvp";
 
@@ -32,6 +34,7 @@ export default function RSVPForm() {
     });
     const data = (await res.json()) as RSVPResponse;
     setStatus(data.message);
+    setIsSubmitting(false);
   };
 
   return (
@@ -44,7 +47,9 @@ export default function RSVPForm() {
         </select>
         <input name="guests" type="number" min={1} className="w-full border p-2 rounded bg-white" placeholder="Tổng số người dự" onChange={handleChange} />
         <textarea name="requests" placeholder="Yêu cầu riêng? Ví dụ: món chay..." className="w-full border p-2 rounded bg-white" onChange={handleChange} />
-        <button type="submit" className="w-full submitBtnColor text-white p-2 rounded font-semibold cursor-pointer">Xác nhận</button>
+        <button type="submit" className="w-full submitBtnColor text-white p-2 rounded font-semibold cursor-pointer" disabled={isSubmitting}>
+          {isSubmitting ? "Đang gửi..." : "Xác nhận"}
+        </button>
         {status && <p className="text-green-600">{status}</p>}
       </form>
   );

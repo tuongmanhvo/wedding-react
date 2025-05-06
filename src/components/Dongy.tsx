@@ -38,7 +38,7 @@ const Dongy = () => {
     }, []);
 
     return (
-        <div id='dongy' className="min-h-screen w-full flex flex-col items-center justify-center gap-10 pb-30" style={{ backgroundColor: '#FFFEFD' }}>
+        <div id='dongy' className="min-h-screen w-full flex flex-col items-center justify-center gap-10 py-10" style={{ backgroundColor: '#FFFEFD' }}>
             <div className="flex flex-col items-center w-full gap-10 md:flex-row lg:flex-row">
                 <div className='md:w-1/3 lg:w-1/3'>
                     <Image

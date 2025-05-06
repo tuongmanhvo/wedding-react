@@ -36,14 +36,14 @@ export default function RSVPForm() {
 
   return (
       <form onSubmit={handleSubmit} className="max-w-xl mx-auto p-4 rounded-2xl shadow space-y-4 ">
-        <input name="name" required placeholder="Tên khách mời" className="w-full border p-2 rounded" onChange={handleChange} />
-        {/* <input name="email" type="email" placeholder="Email Address" className="w-full border p-2 rounded" onChange={handleChange} /> */}
-        <select name="attending" className="w-full border p-2 rounded" onChange={handleChange}>
+        <input name="name" required placeholder="Tên khách mời" className="w-full border p-2 rounded bg-white" onChange={handleChange} />
+        {/* <input name="email" type="email" placeholder="Email Address" className="w-full border p-2 rounded bg-white" onChange={handleChange} /> */}
+        <select name="attending" className="w-full border p-2 rounded bg-white" onChange={handleChange}>
           <option value="yes">Sẽ dự tiệc</option>
           <option value="no">Không dự tiệc</option>
         </select>
-        <input name="guests" type="number" min={1} className="w-full border p-2 rounded" placeholder="Tổng số người dự" onChange={handleChange} />
-        <textarea name="requests" placeholder="Yêu cầu riêng? Ví dụ: món chay..." className="w-full border p-2 rounded" onChange={handleChange} />
+        <input name="guests" type="number" min={1} className="w-full border p-2 rounded bg-white" placeholder="Tổng số người dự" onChange={handleChange} />
+        <textarea name="requests" placeholder="Yêu cầu riêng? Ví dụ: món chay..." className="w-full border p-2 rounded bg-white" onChange={handleChange} />
         <button type="submit" className="w-full submitBtnColor text-white p-2 rounded font-semibold cursor-pointer">Xác nhận</button>
         {status && <p className="text-green-600">{status}</p>}
       </form>

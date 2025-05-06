@@ -106,7 +106,7 @@ export default function Home() {
           className="absolute bottom-0 left-1/2 -translate-x-1/2 object-cover w-full h-full"
         >
           <Image
-            src="/images/homepage/Frame 34.png"
+            src="/images/homepage/Frame 34.jpg"
             alt="Moving Image"
             fill
             style={{ objectFit: "cover" }}
@@ -118,7 +118,7 @@ export default function Home() {
       <Dongy />
 
       <div className="min-h-screen flex flex-col items-center justify-center" >
-        <h2 className="rvspTitle ">Xác nhận dự tiệc cưới</h2>
+        <h2 className="rvspTitle " style={{ fontFamily: 'Times New Roman' }}>Xác nhận dự tiệc cưới</h2>
         <Image
           src="/images/homepage/Frame 15.png"
           alt="Image"
@@ -126,7 +126,7 @@ export default function Home() {
           width={250} // Added width
           height={250} // Added height
         />
-        <h2 className="rvspName">Tường & Kim</h2>
+        <h2 className="rvspName" style={{ fontFamily: 'Times New Roman' }}>Tường & Kim</h2>
 
         <RSVPForm />
       </div>

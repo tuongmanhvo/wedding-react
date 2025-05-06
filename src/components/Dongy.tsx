@@ -38,7 +38,23 @@ const Dongy = () => {
     }, []);
 
     return (
-        <div id='dongy' className="min-h-screen w-full flex flex-col items-center justify-center gap-10" >
+        <div id='dongy' className="min-h-screen w-full flex flex-col items-center justify-center gap-10 pb-30" style={{ backgroundColor: '#FFFEFD' }}>
+            <div className="flex flex-col items-center w-full gap-10 md:flex-row lg:flex-row">
+                <Image
+                    src="/images/homepage/Rectangle 7.jpg"
+                    alt="Moving Image"
+                    className="object-cover md:width-1/3 lg:width-1/3"
+                    width={640} // Adjusted width for 1/3 of screen
+                    height={1080} // Adjusted height
+                />
+                <Image
+                    src="/images/homepage/Rectangle 9.jpg"
+                    alt="Image"
+                    className="object-cover md:width-2/3 lg:width-2/3"
+                    width={1280} // Adjusted width for 2/3 of screen
+                    height={1080} // Adjusted height
+                />
+            </div>
 
             <div id="dongyHinh" className="flex flex-col items-center w-full -h-screen">
                 <Image
@@ -47,14 +63,6 @@ const Dongy = () => {
                     className="w-full h-screen object-cover"
                     width={1920} // Added width property
                     height={1080} // Added height property
-                />
-                <Image
-                    src="/images/homepage/Frame 15.png"
-                    alt="Image"
-                    className="relative w-50"
-                    width={250} // Added width
-                    height={250} // Added height
-                    style={{ transform: 'translateY(-50%)' }} // Move up 50% of its height
                 />
             </div>
             <span className="text-4xl text-center leading-relaxed">VÂNG, CHÚNG MÌNH ĐỒNG Ý</span>

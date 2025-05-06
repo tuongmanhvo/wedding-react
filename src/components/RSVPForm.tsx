@@ -45,7 +45,14 @@ export default function RSVPForm() {
           <option value="yes">Sẽ dự tiệc</option>
           <option value="no">Không dự tiệc</option>
         </select>
-        <input name="guests" type="number" min={1} className="w-full border p-2 rounded bg-white" placeholder="Tổng số người dự" onChange={handleChange} />
+        <select name="guests" className="w-full border p-2 rounded bg-white" onChange={handleChange}>
+          {[
+            <option key="0" value="0">Số người dự tiệc</option>,
+            ...[...Array(10).keys()].map((num) => (
+              <option key={num + 1} value={num + 1}>{num + 1} người dự tiệc</option>
+            ))
+          ]}
+        </select>
         <textarea name="requests" placeholder="Yêu cầu riêng? Ví dụ: món chay..." className="w-full border p-2 rounded bg-white" onChange={handleChange} />
         <button type="submit" className="w-full submitBtnColor text-white p-2 rounded font-semibold cursor-pointer" disabled={isSubmitting}>
           {isSubmitting ? "Đang gửi..." : "Xác nhận"}

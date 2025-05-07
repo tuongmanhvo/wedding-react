@@ -32,7 +32,7 @@ const AlbumIndex = () => {
                         objectFit="cover"
                     />
                 </div>
-                <div className='w-full aspect-square overflow-hidden md:w-[300px] lg:w-[600px] ' >
+                <div id="Album2" className='w-full aspect-square overflow-hidden md:w-[300px] lg:w-[600px] cursor-pointer' onClick={() => router.push('/album2')}>
                     <Image
                         src="/images/Album 2/MIN04349.jpg"
                         alt="Moving Image"

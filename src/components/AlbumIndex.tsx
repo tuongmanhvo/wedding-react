@@ -52,7 +52,7 @@ const AlbumIndex = () => {
                         objectFit="cover"
                     />
                 </div>
-                <div className='w-full aspect-square overflow-hidden md:w-[300px] lg:w-[600px] ' >
+                <div id="Album4" className='w-full aspect-square overflow-hidden md:w-[300px] lg:w-[600px] cursor-pointer' onClick={() => router.push('/album4')}>
                     <Image
                         src="/images/Album 4/TK-album 4.png"
                         alt="Moving Image"
